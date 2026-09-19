@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizky Dwi Karunia Sejati | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Menggunakan font Google 'Inter' agar terlihat modern -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigasi -->
+    <header id="navbar">
+        <div class="container nav-container">
+            <h1 class="logo">Rizky<span>.</span></h1>
+            <ul class="nav-links">
+                <li><a href="#hero">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#services">Layanan</a></li>
+                <li><a href="#portfolio">Portofolio</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+            <!-- Tombol menu untuk tampilan mobile -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container hero-content">
+            <p class="greeting">Halo, saya</p>
+            <h1 class="name">Rizky Dwi Karunia Sejati</h1>
+            <h2 class="tagline">Mahasiswa Rekayasa Sistem Komputer | Web Developer | Founder Nexframe Visual</h2>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn btn-primary">Lihat Portofolio</a>
+                <a href="#contact" class="btn btn-secondary">Hubungi Saya</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Tentang <span>Saya</span></h2>
+            <div class="about-content">
+                <p>
+                    Saya adalah mahasiswa jurusan <strong>Rekayasa Sistem Komputer</strong> di Universitas Tanjungpura (FMIPA), Pontianak. 
+                    Saya memiliki latar belakang pendidikan DKV (Desain Komunikasi Visual) yang memperkuat fondasi kreatif saya.
+                </p>
+                <p>
+                    Saat ini, saya memiliki ketertarikan besar dan terus mendalami bidang digital sistem, pemrograman, <em>public speaking</em>, 
+                    serta produksi visual mencakup videografi dan fotografi.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Pengalaman Section -->
+    <section id="services" class="section bg-darker">
+        <div class="container">
+            <h2 class="section-title">Pengalaman & <span>Layanan</span></h2>
+            <div class="cards-grid">
+                
+                <!-- Card 1 -->
+                <div class="card">
+                    <div class="card-icon">🎥</div>
+                    <h3>Nexframe Visual & Rental</h3>
+                    <p>Pendiri studio visual dan penyedia layanan rental alat produksi event profesional (seperti HT Baofeng, kabel HDMI, dan kabel LAN).</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <div class="card-icon">🖨️</div>
+                    <h3>Praktisi Produksi</h3>
+                    <p>Memiliki pengalaman langsung secara praktis dan operasional di industri percetakan lokal di wilayah Pontianak.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <div class="card-icon">💻</div>
+                    <h3>Web & Tech Development</h3>
+                    <p>Berpengalaman mengerjakan proyek berbasis C, PHP, MySQL, serta perancangan dan implementasi sistem digital.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
+        <div class="container">
+            <h2 class="section-title">Proyek <span>Terbaru</span></h2>
+            <div class="portfolio-grid">
+                
+                <!-- Project 1 -->
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x250/1e1e1e/00d2ff?text=Web+PHP+Project" alt="Proyek Web PHP">
+                    <div class="portfolio-info">
+                        <h3>Proyek Web PHP</h3>
+                        <p>Pengembangan web dinamis menggunakan PHP dan MySQL.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x250/1e1e1e/00d2ff?text=TechMonlogy+Layout" alt="Desain Layout ala TechMonlogy">
+                    <div class="portfolio-info">
+                        <h3>Desain Layout Tech</h3>
+                        <p>Konsep desain layout sinematik ala TechMonlogy.</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x250/1e1e1e/00d2ff?text=Event+Documentation" alt="Dokumentasi Event">
+                    <div class="portfolio-info">
+                        <h3>Dokumentasi Event</h3>
+                        <p>Produksi visual dan dokumentasi menggunakan peralatan dari Nexframe.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-darker">
+        <div class="container">
+            <h2 class="section-title">Hubungi <span>Saya</span></h2>
+            <div class="contact-container">
+                <form class="contact-form">
+                    <input type="text" placeholder="Nama Anda" required>
+                    <input type="email" placeholder="Email Anda" required>
+                    <textarea rows="5" placeholder="Pesan Anda" required></textarea>
+                    <button type="submit" class="btn btn-primary submit-btn">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Rizky Dwi Karunia Sejati. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

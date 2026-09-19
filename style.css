@@ -1,0 +1,322 @@
+/* --- Konfigurasi Tema (Variabel CSS) --- */
+:root {
+    --bg-main: #0f1115;      /* Latar belakang utama (gelap) */
+    --bg-darker: #090a0f;    /* Latar belakang selang-seling */
+    --bg-card: #1c1f26;      /* Latar belakang kartu */
+    --text-main: #e2e8f0;    /* Teks utama (putih pudar) */
+    --text-muted: #94a3b8;   /* Teks sekunder */
+    --accent: #00d2ff;       /* Warna aksen teknologi (Cyan) */
+    --accent-hover: #00a8cc; /* Warna aksen saat di-hover */
+}
+
+/* --- Reset Dasar --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth; /* Efek scroll halus */
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* --- Tipografi & Utility --- */
+.section {
+    padding: 100px 0;
+}
+.bg-darker {
+    background-color: var(--bg-darker);
+}
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+.section-title span {
+    color: var(--accent);
+}
+
+/* --- Navigasi (Header) --- */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(15, 17, 21, 0.95);
+    padding: 20px 0;
+    z-index: 1000;
+    transition: 0.3s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.logo span {
+    color: var(--accent);
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+.nav-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* Menu Toggle (Mobile) */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--text-main);
+    transition: all 0.3s ease-in-out;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px; /* Offset untuk navbar */
+}
+.greeting {
+    color: var(--accent);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+.name {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.tagline {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.btn {
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--bg-main);
+    border: 2px solid var(--accent);
+}
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--accent);
+}
+.btn-secondary {
+    background-color: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+}
+.btn-secondary:hover {
+    background-color: var(--accent);
+    color: var(--bg-main);
+}
+
+/* --- About Section --- */
+.about-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+.about-content p {
+    margin-bottom: 20px;
+}
+.about-content strong {
+    color: var(--text-main);
+}
+
+/* --- Services Section (Cards) --- */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.card {
+    background-color: var(--bg-card);
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.1);
+    border-color: rgba(0, 210, 255, 0.3);
+}
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+.card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* --- Portfolio Section (Grid) --- */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+.portfolio-item {
+    background-color: var(--bg-card);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.portfolio-item:hover {
+    transform: scale(1.02);
+}
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 3px solid var(--accent);
+}
+.portfolio-info {
+    padding: 20px;
+}
+.portfolio-info h3 {
+    margin-bottom: 10px;
+}
+.portfolio-info p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* --- Contact Section --- */
+.contact-container {
+    max-width: 600px;
+    margin: auto;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--accent);
+}
+.submit-btn {
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--bg-main);
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.social-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: 0.3s;
+}
+.social-links a:hover {
+    color: var(--accent);
+}
+
+/* --- Responsivitas (Mobile & Tablet) --- */
+@media (max-width: 768px) {
+    .name {
+        font-size: 2.5rem;
+    }
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    /* Konfigurasi Hamburger Menu Mobile */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(15, 17, 21, 0.98);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        text-align: center;
+        padding: 20px 0;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
